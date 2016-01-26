@@ -1,0 +1,48 @@
+
+import java.util.Calendar;
+import java.util.Date;
+
+	
+public class NewDateApp {
+
+	public static void main(String[] args) {
+		
+	
+	
+/*	import java.util.Calendar;
+	import java.util.Date;
+	import java.util.Scanner;
+
+	import org.joda.time.DateTime;
+	import org.joda.time.Days;
+*/
+	}
+
+		public static long calculateDays(String startDate, String endDate) {
+
+			Date sDate = new Date(04 / 01 / 1972);
+			Date eDate = new Date(00 / 17 / 2016);
+			Calendar cal3 = Calendar.getInstance();
+			cal3.setTime(sDate);
+			Calendar cal4 = Calendar.getInstance();
+			cal4.setTime(eDate);
+			return daysBetween(cal3, cal4);
+			System.out.println(daysBetween(cal3, cal4));
+
+		}
+
+		private static long daysBetween(Calendar cal3, Calendar cal4) {
+			// TODO Auto-generated method stub
+			return 0;
+
+			// private static long daysBetween(Calendar cal3, Calendar cal4) {
+			// TODO Auto-generated method stub
+			// return 0;
+		}
+	}
+
+	
+	
+	
+	
+}

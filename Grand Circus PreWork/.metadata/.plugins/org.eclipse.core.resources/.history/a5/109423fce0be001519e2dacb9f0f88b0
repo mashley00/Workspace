@@ -1,0 +1,61 @@
+import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Parseinput {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Enter start date in yyyy/dd/MM format: ");
+		String dateStart = input.nextLine();
+
+		System.out.println("Enter end date in yyyy/dd/MM format: ");
+		String dateEnd = input.nextLine();
+
+		Calendar cal = Calendar.getInstance();
+	//	Calendar cal2 = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/dd/MM", Locale.getDefault());
+		try {
+
+			cal.setTime(sdf.parse(dateStart));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		try {
+
+			cal.setTime(sdf.parse(dateEnd));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+
+		DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy/dd/MM", Locale.ENGLISH);
+		LocalDate date1 = LocalDate.parse(dateStart, formatter1);
+		//	System.out.println(date1); 
+		
+		DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy/dd/MM", Locale.ENGLISH);
+		LocalDate date2 = LocalDate.parse(dateEnd, formatter2);
+		//System.out.println(date2); 
+
+		Period p = Period.between(date1, date2);
+		long p2 = ChronoUnit.DAYS.between(date1, date2);
+		System.out.println("The number of days between Start Date and End Date is: " +p2 + " The number of months is: " + p.getMonths() 
+		+ " And the number of Years is: " + p.getYears());
+		
+		System.out.println(p);
+	}
+
+	private static Object newScanner(InputStream in) {
+		return null;
+	}
+
+}

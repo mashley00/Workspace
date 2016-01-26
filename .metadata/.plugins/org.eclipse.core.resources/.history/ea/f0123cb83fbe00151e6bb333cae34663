@@ -1,0 +1,16 @@
+//import java.time.LocalDate;
+
+public class Period {
+public static void main(String[] args) {
+	
+	
+	//LocalDate sDate = LocalDate.now();
+	//LocalDate eDate = LocalDate
+	
+	
+	System.out.println("Enter start date: ");
+	
+	
+}
+
+}

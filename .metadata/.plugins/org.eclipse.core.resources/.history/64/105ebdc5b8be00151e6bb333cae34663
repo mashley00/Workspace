@@ -1,0 +1,73 @@
+import java.io.InputStream;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+import java.util.Scanner;
+
+
+
+
+
+
+
+
+
+public class Period {
+public static void main(String[] args) {
+	//
+	SimpleDateFormat sdf = new SimpleDateFormat("yyyy, MM, dd");
+
+	Date sdate = sdf.parse("your first date");
+	
+	//Scanner input = new Scanner(System.in);
+	//System.out.println("enter start date test: ");
+	//String line = input.nextLine;
+	
+	//
+	
+	LocalDate sdate = LocalDate.now();
+	LocalDate edate = LocalDate.of(1960, Month.JANUARY, 1);
+//	LocalDate ndate = LocalDate.of(year, month, dayOfMonth)
+	
+	Period p = Period.between(edate, sdate);
+	long p2 = ChronoUnit.DAYS.between(edate, sdate);
+	
+	System.out.println("Enter a start date: ");
+	
+	
+	System.out.println("your start date is: " + sdate);
+	System.out.println("your end date is: " + edate);
+	System.out.println(p2);
+	
+	//System.out.println("you are " + p.getYears() + "years, " + p.getMonths() + "months, "
+		//	+ "and "  + p.getDays() + " days old.(" + p2 + "days total)");
+	
+	/*
+	 * SimpleDateFormat sdf = new SimpleDateFormat("MMddyyyy");
+
+		Date date = sdf.parse("your first date");
+	 * 
+	 */
+	
+}
+
+private String getDays() {
+	return null;
+}
+
+private String getYears() {
+	return null;
+}
+
+private String getMonths() {
+	return null;
+}
+
+static Period between(LocalDate edate, LocalDate sdate) {
+	return null;
+}
+	
+	
+}

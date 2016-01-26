@@ -1,0 +1,24 @@
+import java.text.NumberFormat;
+
+public class ConvertNumbers {
+	public static void main(String[] args) {
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		//NumberFormat.getCurrencyInstance();
+
+		double price = 49.51;
+		// String priceFormatted = currency.format(price);
+		String priceFormatted = NumberFormat.getCurrencyInstance().format(price);
+		System.out.println(price);
+
+		double discountPercent = .2;
+		NumberFormat percent = NumberFormat.getPercentInstance();
+		String discountPercentFormatted = percent.format(discountPercent);
+		System.out.println(discountPercent);
+		
+		float i= 4;
+		double d = 4.5;
+		i+=d;
+		System.out.println(i);
+		
+	}
+}

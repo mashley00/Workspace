@@ -1,0 +1,50 @@
+import java.io.InputStream;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.temporal.ChronoUnit;
+import java.util.Scanner;
+
+
+
+
+
+
+
+
+
+public class Period {
+public static void main(String[] args) {
+	
+	LocalDate sdate = LocalDate.now();
+	LocalDate edate = LocalDate.of(1960, Month.JANUARY, 1);
+	
+	Period p = Period.between(edate, sdate);
+	long p2 = ChronoUnit.DAYS.between(edate, sdate);
+	System.out.println("your start date is: " + sdate);
+	System.out.println("your end date is: " + edate);
+	
+	//System.out.println("you are " + p.getYears() + "years, " + p.getMonths() + "months, "
+		//	+ "and "  + p.getDays() + " days old.(" + p2 + "days total)");
+	
+	
+	
+}
+
+private String getDays() {
+	return null;
+}
+
+private String getYears() {
+	return null;
+}
+
+private String getMonths() {
+	return null;
+}
+
+private static Period between(LocalDate edate, LocalDate sdate) {
+	return null;
+}
+	
+	
+}

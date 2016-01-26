@@ -1,0 +1,72 @@
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Scanner;
+
+//import org.joda.time.DateTime;
+//import org.joda.time.Days;
+
+public class Application {
+
+	public static void main(String[] args) {
+
+	// public class Main {
+	}
+	public static long calculateDays(String startDate, String endDate) {
+
+		Date sDate = new Date(04/01/1972);
+		Date eDate = new Date(00/17/2016);
+		Calendar cal3 = Calendar.getInstance();
+		cal3.setTime(sDate);
+		Calendar cal4 = Calendar.getInstance();
+		cal4.setTime(eDate);
+		return daysBetween(cal3, cal4);
+		System.out.println(daysBetween);
+		
+	}
+
+	
+	
+	private static long daysBetween(Calendar cal3, Calendar cal4) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+}
+
+
+/*	public static void main(String[] args) {
+		System.out.println("Enter start date: ");
+		
+		
+		System.out.println("The number of days is: " + (calculateDays("05/01/1972", "05/01/2016")));
+	}
+	}
+*/
+	
+/*
+	//Using Calendar - THE CORRECT WAY 
+	public static long daysBetween(Calendar startDate, Calendar endDate) {
+		Calendar date = (Calendar) startDate.clone();
+		long daysBetween = 0;
+		while (date.before(endDate)) {
+			date.add(Calendar.DAY_OF_MONTH, 1);
+			daysBetween++;
+		}
+		return daysBetween;
+	}
+
+	//public class App 
+	{
+
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Enter Start date using 01/01/2016 format: ");
+		
+		//String line = input.nextLine();
+		//input line = Date.nextLine;		
+		//System.out.println("Enter an End Date: ");
+		
+	}
+
+	
+}
+*/

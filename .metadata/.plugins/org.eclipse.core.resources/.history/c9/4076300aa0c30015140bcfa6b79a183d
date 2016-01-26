@@ -1,0 +1,61 @@
+import java.text.NumberFormat;
+import java.time.Month;
+import java.util.Scanner;
+
+public class RoomDimensions {
+
+	public static void main(String[] args) {
+
+		String choice = "y";
+		{
+
+		}
+
+		System.out.println("Enter lenght of Wall 1(length): ");
+		Scanner scan1 = new Scanner(System.in);
+		double wall1 = scan1.nextDouble();
+		//scan1.nextLine();
+		System.out.println("Enter lenght of Wall 2(width): ");
+		Scanner scan2 = new Scanner(System.in);
+		double wall2 = scan2.nextDouble();
+		//scan2.nextLine();
+
+		double perimeter;
+		perimeter = (2 * (wall1 + wall2));
+
+		System.out.println("The perimeter of the room is in meters is: " + perimeter);
+
+		double areaOfRoom;
+		areaOfRoom = (wall1 * wall2);
+
+		System.out.println("The area of the room in meters is: " + areaOfRoom);
+
+		System.out.println("Would you like to continue? Type Y or N: ");
+		
+		while (choice.equalsIgnoreCase("y"));
+
+		//choice = scan1.nextLine();while (choice = y) {
+		
+		
+		System.out.println("Enter the height of the room in meters: ");
+		System.out.println("Enter the height of the room in meters: ");
+		
+		Scanner height = new Scanner(System.in);
+		double height1 = height.nextDouble();
+		System.out.println("The volume of the room is: " + areaOfRoom * height1 + "meters.");
+		
+	}
+		//
+
+		// String scanContinue ="yes";
+
+		/*
+		 * double wall1 =0; double wall2 =0; double wall3 =0; double wall4 =0;
+		 */
+
+		// double area=;
+		// area = ((wall1+ wall2 ) * (wall3+wall4));
+		// System.out.println(area);
+	}
+
+

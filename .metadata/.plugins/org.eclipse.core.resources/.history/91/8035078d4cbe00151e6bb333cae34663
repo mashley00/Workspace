@@ -1,0 +1,28 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class PeriodDF {
+	public static void main(String[] args) throws ParseException {
+		GregorianCalendar cal1 = new GregorianCalendar();
+		GregorianCalendar cal2 = new GregorianCalendar();
+
+		SimpleDateFormat sdf = new SimpleDateFormat("MMddyyyy");
+
+		Date date = sdf.parse("your first date");
+		cal1.setTime(date);
+		date = sdf.parse("your second date");
+		cal2.setTime(date);
+
+		cal1.set(05, 01, 1972);
+		cal2.set(01, 17, 2016);
+		System.out.println("Days= " + daysBetween(cal1.getTime(), cal2.getTime()));
+
+	}
+
+	private static String daysBetween(Date time, Date time2) {
+		return null;
+	}
+
+}

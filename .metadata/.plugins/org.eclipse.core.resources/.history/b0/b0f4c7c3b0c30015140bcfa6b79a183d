@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class ConvertNumberGradesToLetters {
+
+	public static void main(String[] args) {
+
+		int numGrade1 =0;
+		//int grade2 =0;
+		//int grade3 =0;
+		//int grade4 =0;
+		//int grade5 =0;
+		
+			
+		System.out.println("Enter your numerical grade: " );
+		Scanner inputGrade = new Scanner(System.in);
+		numGrade1 = inputGrade.nextInt();
+		
+		//numGrade1 >= 88 && <=100;
+		if (numGrade1 >=88 && numGrade1<=100) {
+			System.out.println("you got an A:");
+			
+			
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,41 @@
+import java.text.NumberFormat;
+import java.time.Month;
+import java.util.Scanner;
+
+public class RoomDimensions {
+
+	public static void main(String[] args) {
+
+		System.out.println("Enter lenght of Wall 1(length): ");
+		Scanner scan1 = new Scanner(System.in);
+		double w1 = scan1.nextInt();
+
+		System.out.println("Enter lenght of Wall 2(width): ");
+		Scanner scan2 = new Scanner(System.in);
+		double w2 = scan2.nextInt();
+		
+		
+
+		double perimeter;
+		perimeter = (2 *(w1 + w2));
+		
+		System.out.println("The perimeter of the room is in meters is: " + perimeter);
+		
+		double areaOfRoom; 
+		areaOfRoom = (w1*w2);
+		
+		System.out.println("The area of the room in meters is: " + areaOfRoom);
+		
+		
+		
+		
+		/*
+		 * double wall1 =0; double wall2 =0; double wall3 =0; double wall4 =0;
+		 */
+	
+	//double area=;
+	//area = ((wall1+ wall2 ) * (wall3+wall4));
+	//	System.out.println(area);
+	}
+
+}

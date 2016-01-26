@@ -1,0 +1,68 @@
+import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Parseinput {
+
+	public static void main(String[] args) {
+
+		//String date;
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("Enter start date in yyyy/dd/MM format: ");
+		String lineStart = input.nextLine();
+		
+		System.out.println("Enter end date in yyyy/dd/MM format: ");
+		String lineEnd = input.nextLine();
+		
+		Calendar cal = Calendar.getInstance();
+		Calendar cal2 = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy/dd/MM", Locale.getDefault());
+		try {
+
+			cal.setTime(sdf.parse(lineStart));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		try {
+
+			cal.setTime(sdf.parse(lineEnd));
+		} catch (ParseException e) {
+			e.printStackTrace();
+		}
+		
+		//String string = "January 2, 2010";
+		DateTimeFormatter formatter1 = DateTimeFormatter.ofPattern("yyyy/dd/MM", Locale.ENGLISH);
+		LocalDate date1 = LocalDate.parse(lineStart, formatter1);
+		System.out.println(date1); // 2010-01-02
+		
+		DateTimeFormatter formatter2 = DateTimeFormatter.ofPattern("yyyy/dd/MM", Locale.ENGLISH);
+		LocalDate date2 = LocalDate.parse(lineEnd, formatter2);
+		System.out.println(date2); // 2010-01-02
+		
+		//Date sdate = new Date();
+		//Date edate = new Date();
+		
+		
+		//lineStart = sdate;
+		
+		Period p = Period.between(date1, date2);
+		long p2 = ChronoUnit.DAYS.between(date1, date2);
+		
+		
+		 System.out.println("date : " + cal.getTime());
+	}
+
+	private static Object newScanner(InputStream in) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

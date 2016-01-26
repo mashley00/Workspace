@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+/**
+ * 
+ */
+
+/**
+ * @author michaelashley
+ *
+ */
+public class MyClass {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		//int x = 9;
+		//int y = 7;
+
+		Scanner scan1 = new Scanner(System.in);
+		int x = scan1.nextInt();
+		
+		x=x+1;
+		System.out.println("the value of x = " +x);
+		
+		scan1.close();
+		
+	}
+
+}

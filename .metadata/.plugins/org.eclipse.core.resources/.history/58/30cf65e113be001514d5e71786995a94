@@ -1,0 +1,44 @@
+import java.text.DateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class main {
+
+	public static void main(String[] args) {
+	
+		//	Date d = new Date();
+		//System.out.println(d);
+		
+		GregorianCalendar gc =new GregorianCalendar(1972, 04,00);
+		gc.add(GregorianCalendar.DATE, 1);
+		Date d2 = gc.getTime();
+		
+		//pegg input;
+		
+		
+		
+		GregorianCalendar gc1 = new GregorianCalendar(2016, 00,13);
+		gc1.add(GregorianCalendar.DATE, 1);
+		Date d3 =gc1.getTime();
+		
+				System.out.println(d2);
+				System.out.println(d3);
+				
+		DateFormat df = DateFormat.getDateInstance(DateFormat.FULL);
+		System.out.println(df.format(d2)+" "+(d3));
+		LocalDateTime ldt = LocalDateTime.now();
+		System.out.println(ldt);
+		
+		LocalDate ld =LocalDate.of(2016, 00, 13);
+		
+		
+		DateTimeFormatter dtf =DateTimeFormatter.ofPattern("M/d/yyyy");
+		System.out.println(dtf.format(ld));
+		
+				
+	}
+	
+}

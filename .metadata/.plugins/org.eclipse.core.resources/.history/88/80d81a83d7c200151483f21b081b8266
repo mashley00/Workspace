@@ -1,0 +1,14 @@
+import java.text.NumberFormat;
+
+public class ConvertNumbers {
+	public static void main(String[] args) {
+		NumberFormat currency = NumberFormat.getCurrencyInstance();
+		NumberFormat.getCurrencyInstance();
+
+		double price = 49.51;
+		// String priceFormatted = currency.format(price);
+		String priceFormatted = NumberFormat.getCurrencyInstance().format(price);
+		System.out.println(price);
+
+	}
+}

@@ -1,0 +1,27 @@
+import java.util.Calendar;
+import java.util.Date;
+
+public class DateApp2 {
+
+	// public static void main(String[] args) {
+
+	// public class Main {
+
+	public static long calculateDays(String startDate, String endDate) {
+
+		Date sDate = new Date(startDate);
+		Date eDate = new Date(endDate);
+		Calendar cal3 = Calendar.getInstance();
+		cal3.setTime(sDate);
+		Calendar cal4 = Calendar.getInstance();
+		cal4.setTime(eDate);
+		return daysBetween(cal3, cal4);
+	}
+
+	// public static void main(String[] args) {
+	System.out.println("Enter start date: ");
+
+	System.out.println("The number of days is: "+(calculateDays("05/01/1972", "05/01/2016")));
+
+		}
+}
